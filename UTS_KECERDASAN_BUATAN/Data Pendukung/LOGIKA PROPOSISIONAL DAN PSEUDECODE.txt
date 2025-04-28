@@ -1,0 +1,43 @@
+LOGIKA PROPOSISIONAL
+
+Simbol   Artinya
+A       daun_menguning
+B       bercak_hitam
+C       daun_berlubang
+D       tanaman_layu
+
+(A \land B \land \neg D) \ Tanaman mengalami kekurangan nutrisi
+(\neg A \land D \land \neg B) \ Tanaman mengalami busuk akar
+(C \land A) \ Tanaman diserang ulat
+(B \land \neg A \land \neg C) \Tanaman terkena penyakit bintik daun
+(\neg A \land C \land D) \ Tanaman diserang thrips
+(A \land \neg D \land \neg C \land \neg B) \ Tanaman sehat
+default \ Gejala tanaman tidak cocok dengan basis data kami. Silakan konsultasikan lebih lanjut.
+
+
+PSEUDECODE
+
+MULAI
+
+Tanyakan: Apakah daun menguning? (A)
+Tanyakan: Apakah terdapat bercak hitam pada daun? (B)
+Tanyakan: Apakah daun berlubang? (C)
+Tanyakan: Apakah tanaman layu? (D)
+
+IF A ya DAN B  tidak DAN D  tidak THEN
+  Output "Tanaman mengalami kekurangan nutrisi"
+ELSE IF A  tidak DAN D  ya DAN B  tidak THEN
+  Output "Tanaman mengalami busuk akar"
+ELSE IF C  ya DAN A  ya THEN
+  Output "Tanaman diserang ulat"
+ELSE IF B  ya DAN A  tidak DAN C  tidak THEN
+  Output "Tanaman terkena penyakit bintik daun"
+ELSE IF A  tidak DAN C  ya DAN D  ya THEN
+  Output "Tanaman diserang thrips"
+ELSE IF A  ya DAN D  tidak DAN C  tidak DAN B  tidak THEN
+  Output "Tanaman sehat"
+ELSE
+  Output "Gejala tidak cocok, silakan konsultasikan lebih lanjut"
+END IF
+
+SELESAI
